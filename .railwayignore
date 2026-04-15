@@ -1,0 +1,19 @@
+# Archivos de procesamiento / análisis (no necesarios en producción)
+Fase_1_Limpieza.ipynb
+Fase_2_EDA.ipynb
+elevation_cache.csv
+geocoding_cache.csv
+unique_munis.csv
+municipios_categorizados.csv
+cuestionario.txt
+cuestionario_utf8.txt
+Cuestionario.pdf
+
+# Git
+.git/
+.gitignore
+
+# Entornos locales
+node_modules/
+.env
+.env.local

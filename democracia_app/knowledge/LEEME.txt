@@ -1,0 +1,31 @@
+================================================================================
+CÓMO AGREGAR DOCUMENTOS DE CONTEXTO PARA EL ASISTENTE IA
+================================================================================
+
+INSTRUCCIONES
+1. Copia aquí cualquier archivo .txt con información relevante.
+2. Abre el archivo `manifest.json` en esta misma carpeta.
+3. Agrega una entrada con el nombre del archivo:
+
+   {
+     "name": "mi_documento.txt",
+     "label": "Título descriptivo del documento",
+     "enabled": true
+   }
+
+4. Recarga la página del dashboard. El asistente cargará el nuevo documento
+   automáticamente al inicializarse.
+
+CONSEJOS
+- Los archivos deben estar en codificación UTF-8.
+- Para PDFs: convierte el PDF a texto (.txt) antes de colocarlo aquí.
+  Puedes hacer esto con Adobe Acrobat, Word, o herramientas online gratuitas.
+- El contenido de todos los archivos habilitados se incluye en cada llamada
+  al asistente. Si son muy largos, considera resumirlos para ahorrar tokens.
+- Puedes deshabilitar un archivo temporalmente cambiando "enabled": true
+  a "enabled": false en el manifest.json sin necesidad de borrar el archivo.
+
+ARCHIVOS ACTUALES
+- estudio_cuidar_democracia_2025.txt  →  Resumen ejecutivo del estudio 2025
+- metodologia_invamer.txt             →  Ficha técnica metodológica de INVAMER
+================================================================================

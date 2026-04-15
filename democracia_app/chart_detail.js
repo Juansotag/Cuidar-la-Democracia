@@ -1224,3 +1224,417 @@ function renderComparisonTable(labels, countsA, countsB, totA, totB, nameA, name
     container.innerHTML = html;
 }
 
+// ═══════════════════════════════════════════════════════════════════════════════
+//  MÓDULO: Asistente IA (ChatGPT / OpenAI)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const AI_KEY_STORAGE = 'cuidar_democracia_openai_key';
+const AI_MODEL = 'gpt-4o';
+let aiChatHistory = []; // {role: 'user'|'assistant', content: string}[]
+
+// Documentos cargados desde la carpeta knowledge/
+let aiKnowledgeDocs = []; // [{label: string, content: string}]
+
+// ────────────────────────────────────────────
+//  loadKnowledgeDocs  –  Carga el manifest y
+//  hace fetch de cada archivo .txt habilitado
+// ────────────────────────────────────────────
+async function loadKnowledgeDocs() {
+    try {
+        const manifestRes = await fetch('./knowledge/manifest.json');
+        if (!manifestRes.ok) return; // Carpeta no encontrada o vacía
+        const manifest = await manifestRes.json();
+
+        const enabled = (manifest.files || []).filter(f => f.enabled && f.name.endsWith('.txt'));
+
+        const fetched = await Promise.allSettled(
+            enabled.map(async (f) => {
+                const res = await fetch(`./knowledge/${f.name}`);
+                if (!res.ok) throw new Error(`No se pudo cargar ${f.name}`);
+                const text = await res.text();
+                return { label: f.label || f.name, content: text.trim() };
+            })
+        );
+
+        aiKnowledgeDocs = fetched
+            .filter(r => r.status === 'fulfilled')
+            .map(r => r.value);
+
+        console.log(`[IA] ${aiKnowledgeDocs.length} documento(s) de conocimiento cargados.`);
+    } catch (err) {
+        console.warn('[IA] No se pudieron cargar los documentos de conocimiento:', err.message);
+    }
+}
+
+// ────────────────────────────────────────────
+//  buildChartContext  – construye el contexto
+//  que se enviará al modelo como system prompt
+// ────────────────────────────────────────────
+function buildChartContext() {
+    const question = qDict[COL] || COL;
+    const totalRaw = rawData.length;
+    const totalFil = filteredData.length;
+
+    // ── Base de conocimiento institucional (siempre presente en el sistema) ──
+    const STUDY_KNOWLEDGE = `
+ACERCA DE ESTE DASHBOARD Y EL ESTUDIO:
+El dashboard "Estudio sobre Democracia 2025" es una herramienta interactiva de análisis de opinión pública desarrollada para explorar los resultados de la encuesta nacional "Cuidar la Democracia" edición 2025. Fue realizado por el Laboratorio de Gobierno de la Universidad de la Sabana para facilitar el análisis de los resultados del estudio Cuidar la Democracia 2025
+
+¿QUÉ ES CUIDAR LA DEMOCRACIA?
+Un estudio nacional liderado por once universidades y otras entidades comprometidas con la democracia en Colombia, revela que la desinformación es hoy la principal amenaza para la democracia en Colombia. Aunque persiste la insatisfacción por aspectos como la corrupción y la desigualdad, la ciudadanía mantiene la fe en el voto y ve en la educación el principal camino para fortalecer el sistema democrático. Ad portas de las elecciones de 2026, el estudio “Cuidar la democracia”, liderado por las universidades más prestigiosas del país, algunas empresas del sector privado e Invamer, refleja la temperatura electoral.  La encuesta ofrece un mapa claro de prioridades ciudadanas: más allá de identidades partidistas, hay una demanda transversal por reglas de juego limpias, información verificable y resultados concretos en oportunidades, seguridad y equidad. En ese marco, la iniciativa plantea que el reto no es solo “participar”, sino elevar la calidad de la conversación pública y cerrar la distancia entre lo que la gente espera de la democracia y lo que siente que recibe.   Para llegar a esto, el estudio recurrió a 1.700 personas en 81 municipios, con cubrimiento urbano y rural, con un margen de error de ±2,76% y un nivel de confianza del 95% y pudo establecer, que pese a la falta de confianza de los colombianos, entre las soluciones a los temas más preocupantes, la educación y el rol de las universidades abre la posibilidad para la construcción de un mejor país.  
+
+¿QUÉ UNIVERSIDADES Y ENTIDADES PARTICIPARON? 
+
+La universidad Eafit, La universidad de los Andes, La Pontificia Universidad Javeriana, La universidad Icesi, La universidad de la Sabana, La universidad Autónoma de Bucaramanga, La universidad del Norte, La universidad Cesa, La universidad del Rosario, La universidad Tecnológica de Bolívar, La universidad Uniminuto, Sura, Comfama y Vélez Reyes
+
+¿QUÉ ES GOVLAB (Laboratorio de Gobierno de la Universidad de La Sabana)?
+GovLab es el Laboratorio de Gobierno de la Universidad de La Sabana, una unidad académica dedicada a la innovación en gestión pública, gobernanza y política pública. Contribuye al estudio generando análisis de los datos, desarrollando la plataforma digital y apoyando la difusión de los resultados hacia tomadores de decisiones y ciudadanía.
+
+¿QUÉ ES INVAMER S.A.S.?
+INVAMER S.A.S. es una de las firmas de investigación de mercados y opinión pública más reconocidas de Colombia. Es responsable del diseño metodológico, la recolección de datos y el procesamiento estadístico de la encuesta. Garantiza la representatividad y rigor científico de los resultados.
+
+METODOLOGÍA:
+- La encuesta fue realizada a nivel nacional con una muestra representativa de la población colombiana.
+- Cubre múltiples dimensiones de la democracia: satisfacción general, confianza institucional, participación política, percepciones sobre el voto, libertades, igualdad, y reformas deseadas.
+- Los datos permiten cruzar variables sociodemográficas: sexo, género, edad, nivel educativo, estrato, ocupación, departamento y municipio.
+
+PARA QUÉ SIRVE ESTA PLATAFORMA:
+- Explorar los resultados de la encuesta de forma visual e interactiva.
+- Filtrar los datos por grupos demográficos y territorios.
+- Comparar dos grupos entre sí para identificar diferencias significativas.
+- Descargar gráficas para presentaciones e informes.
+- Consultar a un asistente IA que interpreta los datos en su contexto.`;
+
+    // ── Documentos adicionales cargados desde la carpeta knowledge/ ──
+    let extraKnowledge = '';
+    if (aiKnowledgeDocs.length > 0) {
+        extraKnowledge = '\n\nDOCUMENTOS DE REFERENCIA ADICIONALES:' +
+            aiKnowledgeDocs.map(doc =>
+                `\n\n--- ${doc.label.toUpperCase()} ---\n${doc.content}`
+            ).join('');
+    }
+
+    // ── Filtros activos ──
+    const activeFilters = [];
+    Object.entries(filterControls).forEach(([id, control]) => {
+        if (!control) return;
+        const vals = control.getValue(true);
+        if (!vals || vals.length === 0) return;
+        const labelMap = {
+            'filter-sexo': 'Sexo', 'filter-genero': 'Género',
+            'filter-educacion': 'Nivel Educativo', 'filter-actividad': 'Ocupación',
+            'filter-estrato': 'Estrato', 'filter-depto': 'Departamento',
+            'filter-muni': 'Municipio'
+        };
+        activeFilters.push(`${labelMap[id] || id}: ${vals.join(', ')}`);
+    });
+
+    const filterDesc = activeFilters.length > 0
+        ? `- Filtros activos:\n${activeFilters.map(f => `  • ${f}`).join('\n')}`
+        : '- Sin filtros aplicados (muestra total del país)';
+
+    // ── Helper: calcular distribución sobre un subconjunto ──
+    const calcDist = (subset) => {
+        if (!subset || subset.length === 0) return '  (Sin datos)';
+        const counts = {};
+        const tot = subset.length;
+        subset.forEach(r => {
+            const val = (r[COL] || '').trim() || 'No contesta / No sabe';
+            counts[val] = (counts[val] || 0) + 1;
+        });
+        return Object.entries(counts)
+            .sort((a, b) => b[1] - a[1])
+            .map(([cat, n]) => `  • ${cat}: ${n} (${((n / tot) * 100).toFixed(1)}%)`)
+            .join('\n');
+    };
+
+    // ── Detectar modo de comparación de grupos ──
+    let comparisonSection = '';
+    const isAge = segmentVariable === 'EDAD';
+    const hasA = isAge || Object.values(segGroups).some(v => v === 'a');
+    const hasB = isAge || Object.values(segGroups).some(v => v === 'b');
+
+    if (segmentVariable && (hasA || hasB)) {
+        let dataA = [], dataB = [];
+        let descA = '', descB = '';
+
+        if (isAge && segAgeSliderA && segAgeSliderB) {
+            const rA = segAgeSliderA.get().map(Number);
+            const rB = segAgeSliderB.get().map(Number);
+            dataA = filteredData.filter(r => r.EDAD >= rA[0] && r.EDAD <= rA[1]);
+            dataB = filteredData.filter(r => r.EDAD >= rB[0] && r.EDAD <= rB[1]);
+            descA = `Edad ${Math.round(rA[0])}–${Math.round(rA[1])} años`;
+            descB = `Edad ${Math.round(rB[0])}–${Math.round(rB[1])} años`;
+        } else {
+            const valsA = Object.entries(segGroups).filter(([, v]) => v === 'a').map(([k]) => k);
+            const valsB = Object.entries(segGroups).filter(([, v]) => v === 'b').map(([k]) => k);
+            dataA = filteredData.filter(r => valsA.includes((r[segmentVariable] || '').trim()));
+            dataB = filteredData.filter(r => valsB.includes((r[segmentVariable] || '').trim()));
+            const segLabel = segmentVariable.charAt(0) + segmentVariable.slice(1).toLowerCase();
+            descA = valsA.length ? `${segLabel}: ${valsA.join(', ')}` : 'Sin valores asignados';
+            descB = valsB.length ? `${segLabel}: ${valsB.join(', ')}` : 'Sin valores asignados';
+        }
+
+        comparisonSection = `
+MODO DE COMPARACIÓN ENTRE GRUPOS ACTIVADO:
+Variable de segmentación: ${segmentVariable}
+
+GRUPO A – ${descA} (n=${dataA.length}):
+${calcDist(dataA)}
+
+GRUPO B – ${descB} (n=${dataB.length}):
+${calcDist(dataB)}`;
+    }
+
+    // ── Distribución global (datos filtrados) ──
+    const globalDist = (!segmentVariable || (!hasA && !hasB))
+        ? `\nDISTRIBUCIÓN DE RESPUESTAS (datos filtrados, n=${totalFil}):\n${calcDist(filteredData)}`
+        : '';
+
+    return `Eres un asistente experto en análisis de opinión pública, democracia colombiana y ciencias sociales.
+${STUDY_KNOWLEDGE}${extraKnowledge}
+
+═══════════════════════════════════════
+CONTEXTO ACTUAL DE LA GRÁFICA
+═══════════════════════════════════════
+PREGUNTA ANALIZADA:
+${question}
+
+MUESTRA:
+- Total del dataset: ${totalRaw} encuestas nacionales
+- Encuestas visibles: ${totalFil}
+${filterDesc}
+${globalDist}${comparisonSection}
+
+═══════════════════════════════════════
+INSTRUCCIONES DE COMPORTAMIENTO:
+- Responde siempre en español, de forma clara y rigurosa.
+- Apóyate exclusivamente en los datos presentados arriba; NO inventes cifras.
+- Cuando respondas sobre la institución, el estudio o el dashboard, usa la información de la sección "ACERCA DE".
+- Usa Markdown: **negritas** para cifras clave, listas con guion, párrafos separados.
+- Sé conciso: máximo 3–4 párrafos por respuesta a menos que se pida más detalle.`;
+}
+
+// ────────────────────────────────────────────
+//  Renderizar Markdown básico
+// ────────────────────────────────────────────
+function renderMarkdown(text) {
+    return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/^### (.+)$/gm, '<h4 style="margin:0.5em 0 0.25em;font-size:0.9rem">$1</h4>')
+        .replace(/^## (.+)$/gm, '<h3 style="margin:0.5em 0 0.25em;font-size:0.95rem">$1</h3>')
+        .replace(/^- (.+)$/gm, '<li>$1</li>')
+        .replace(/(<li>.*<\/li>)/gs, m => `<ul>${m}</ul>`)
+        .replace(/\n\n/g, '</p><p>')
+        .replace(/\n/g, '<br>')
+        .replace(/^(.+)$/, '<p>$1</p>');
+}
+
+// ────────────────────────────────────────────
+//  Agregar mensaje al chat
+// ────────────────────────────────────────────
+function aiAppendMessage(role, content, isTyping = false) {
+    const container = document.getElementById('ai-messages');
+
+    const wrap = document.createElement('div');
+    wrap.className = `ai-message ai-message--${role}${isTyping ? ' ai-typing-indicator' : ''}`;
+    if (isTyping) wrap.id = 'ai-typing';
+
+    const avatar = document.createElement('div');
+    avatar.className = 'ai-message-avatar';
+    avatar.textContent = role === 'user' ? 'Tú' : 'IA';
+
+    const bubble = document.createElement('div');
+    bubble.className = 'ai-message-bubble';
+
+    if (isTyping) {
+        bubble.innerHTML = '<div class="ai-typing-dot"></div><div class="ai-typing-dot"></div><div class="ai-typing-dot"></div>';
+    } else {
+        bubble.innerHTML = role === 'assistant' ? renderMarkdown(content) : content;
+    }
+
+    wrap.appendChild(avatar);
+    wrap.appendChild(bubble);
+    container.appendChild(wrap);
+    container.scrollTop = container.scrollHeight;
+
+    return wrap;
+}
+
+// ────────────────────────────────────────────
+//  Enviar mensaje a la API de OpenAI
+// ────────────────────────────────────────────
+async function aiSendMessage(userText) {
+    const apiKey = localStorage.getItem(AI_KEY_STORAGE);
+    if (!apiKey) return;
+
+    const sendBtn = document.getElementById('ai-send-btn');
+    const input = document.getElementById('ai-user-input');
+    const suggestions = document.getElementById('ai-suggestions');
+
+    // UI: deshabilitar input
+    sendBtn.disabled = true;
+    input.disabled = true;
+    suggestions.style.display = 'none';
+
+    // Mostrar mensaje del usuario
+    aiAppendMessage('user', userText);
+
+    // Agregar al historial
+    aiChatHistory.push({ role: 'user', content: userText });
+
+    // Mostrar typing indicator
+    aiAppendMessage('assistant', '', true);
+
+    try {
+        const systemPrompt = buildChartContext();
+
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+                model: AI_MODEL,
+                messages: [
+                    { role: 'system', content: systemPrompt },
+                    ...aiChatHistory
+                ],
+                temperature: 0.5,
+                max_tokens: 800
+            })
+        });
+
+        // Remover typing indicator
+        const typingEl = document.getElementById('ai-typing');
+        if (typingEl) typingEl.remove();
+
+        if (!response.ok) {
+            const errData = await response.json().catch(() => ({}));
+            const errMsg = errData.error?.message || `Error ${response.status}`;
+            aiAppendMessage('assistant', `⚠️ **Error de la API:** ${errMsg}`);
+            return;
+        }
+
+        const data = await response.json();
+        const reply = data.choices?.[0]?.message?.content || 'No se recibió respuesta.';
+
+        aiChatHistory.push({ role: 'assistant', content: reply });
+        aiAppendMessage('assistant', reply);
+
+    } catch (err) {
+        const typingEl = document.getElementById('ai-typing');
+        if (typingEl) typingEl.remove();
+        aiAppendMessage('assistant', `⚠️ **Error de red:** ${err.message}. Verifica tu conexión e inténtalo de nuevo.`);
+    } finally {
+        sendBtn.disabled = false;
+        input.disabled = false;
+        input.value = '';
+        input.focus();
+    }
+}
+
+// ────────────────────────────────────────────
+//  Inicializar panel del Asistente IA
+// ────────────────────────────────────────────
+function initAIAssistant() {
+    const keySetup = document.getElementById('ai-key-setup');
+    const chatArea = document.getElementById('ai-chat-area');
+    const keyInput = document.getElementById('ai-api-key-input');
+    const saveKeyBtn = document.getElementById('ai-save-key-btn');
+    const sendBtn = document.getElementById('ai-send-btn');
+    const userInput = document.getElementById('ai-user-input');
+    const clearBtn = document.getElementById('ai-clear-btn');
+    const disconnBtn = document.getElementById('ai-disconnect-btn');
+    const toggleBtn = document.getElementById('ai-toggle-btn');
+    const panelBody = document.getElementById('ai-panel-body');
+    const panelHeader = document.querySelector('.ai-panel-header');
+
+    // Comprobar si ya hay key guardada
+    const savedKey = localStorage.getItem(AI_KEY_STORAGE);
+    if (savedKey) {
+        keySetup.style.display = 'none';
+        chatArea.style.display = 'flex';
+    }
+
+    // Guardar API Key
+    saveKeyBtn.addEventListener('click', () => {
+        const val = keyInput.value.trim();
+        if (!val.startsWith('sk-')) {
+            keyInput.style.borderColor = '#800020';
+            keyInput.placeholder = 'Clave inválida. Debe empezar con sk-...';
+            return;
+        }
+        localStorage.setItem(AI_KEY_STORAGE, val);
+        keySetup.style.display = 'none';
+        chatArea.style.display = 'flex';
+    });
+
+    // Enviar mensaje con botón
+    sendBtn.addEventListener('click', () => {
+        const txt = userInput.value.trim();
+        if (txt) aiSendMessage(txt);
+    });
+
+    // Enviar con Enter (Shift+Enter = nueva línea)
+    userInput.addEventListener('keydown', e => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            const txt = userInput.value.trim();
+            if (txt) aiSendMessage(txt);
+        }
+    });
+
+    // Chips de sugerencias
+    document.querySelectorAll('.ai-suggestion-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+            const prompt = chip.getAttribute('data-prompt');
+            if (prompt) aiSendMessage(prompt);
+        });
+    });
+
+    // Limpiar conversación
+    clearBtn.addEventListener('click', () => {
+        aiChatHistory = [];
+        const messages = document.getElementById('ai-messages');
+        messages.innerHTML = `
+            <div class="ai-message ai-message--assistant ai-message--intro">
+                <div class="ai-message-avatar">IA</div>
+                <div class="ai-message-bubble">Conversación reiniciada. ¿En qué te puedo ayudar con los datos de esta gráfica?</div>
+            </div>`;
+        document.getElementById('ai-suggestions').style.display = 'flex';
+    });
+
+    // Desconectar / cambiar key
+    disconnBtn.addEventListener('click', () => {
+        localStorage.removeItem(AI_KEY_STORAGE);
+        aiChatHistory = [];
+        chatArea.style.display = 'none';
+        keySetup.style.display = 'flex';
+        keyInput.value = '';
+    });
+
+    // Toggle colapsar/expandir panel
+    const togglePanel = () => {
+        const isHidden = panelBody.classList.toggle('hidden');
+        toggleBtn.classList.toggle('collapsed', isHidden);
+    };
+
+    panelHeader.addEventListener('click', e => {
+        // Solo colapsar si el click no fue en el botón de toggle directamente (para evitar doble disparo)
+        if (!e.target.closest('.ai-toggle-btn') || e.target.closest('.ai-panel-header')) togglePanel();
+    });
+
+    toggleBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        togglePanel();
+    });
+}
+
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadKnowledgeDocs(); // Cargar documentos de contexto primero
+    initAIAssistant();
+});

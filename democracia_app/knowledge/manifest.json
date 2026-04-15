@@ -1,0 +1,15 @@
+{
+  "description": "Lista de documentos de conocimiento para el Asistente IA. Agrega aquí el nombre de cada archivo .txt que coloques en esta carpeta para que el asistente lo use como contexto.",
+  "files": [
+    {
+      "name": "estudio_cuidar_democracia_2025.txt",
+      "label": "Estudio Cuidar la Democracia 2025 – Resumen",
+      "enabled": true
+    },
+    {
+      "name": "metodologia_invamer.txt",
+      "label": "Metodología INVAMER",
+      "enabled": true
+    }
+  ]
+}

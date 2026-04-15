@@ -603,6 +603,362 @@
         .seg-age-slider .noUi-handle::after {
             display: none;
         }
+
+        /* ══════════════════════════════════════════════
+           ASISTENTE IA – Estilos
+           ══════════════════════════════════════════════ */
+        .ai-assistant-panel {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(42, 43, 95, 0.10);
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .ai-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 1.75rem;
+            background: linear-gradient(135deg, #2a2b5f 0%, #1e3a8a 60%, #800020 100%);
+            cursor: pointer;
+        }
+
+        .ai-header-left {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .ai-avatar {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .ai-panel-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 0.15rem 0;
+        }
+
+        .ai-panel-subtitle {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.75);
+            margin: 0;
+        }
+
+        .ai-header-right {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .ai-powered-badge {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.85);
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 0.2rem 0.75rem;
+            letter-spacing: 0.03em;
+        }
+
+        .ai-toggle-btn {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .ai-toggle-btn:hover { background: rgba(255,255,255,0.22); }
+
+        .ai-toggle-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .ai-toggle-btn.collapsed svg {
+            transform: rotate(180deg);
+        }
+
+        .ai-panel-body {
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .ai-panel-body.hidden {
+            display: none;
+        }
+
+        /* ── Key Setup ── */
+        .ai-key-setup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1rem;
+            gap: 0.75rem;
+        }
+
+        .ai-key-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(42, 43, 95, 0.07);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.25rem;
+        }
+
+        .ai-key-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .ai-key-desc {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin: 0;
+            max-width: 380px;
+            line-height: 1.5;
+        }
+
+        .ai-key-input-row {
+            display: flex;
+            gap: 0.75rem;
+            width: 100%;
+            max-width: 480px;
+            margin-top: 0.5rem;
+        }
+
+        .ai-key-input {
+            flex: 1;
+            padding: 0.65rem 1rem;
+            border: 1.5px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 0.875rem;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .ai-key-input:focus { border-color: var(--accent); }
+
+        .ai-save-key-btn {
+            padding: 0.65rem 1.25rem;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .ai-save-key-btn:hover { background: #1e1b4b; }
+
+        /* ── Chat Area ── */
+        .ai-chat-area { display: flex; flex-direction: column; gap: 1rem; }
+
+        .ai-suggestions {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .ai-suggestion-chip {
+            padding: 0.4rem 0.9rem;
+            background: rgba(42,43,95,0.06);
+            border: 1px solid rgba(42,43,95,0.15);
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--accent);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .ai-suggestion-chip:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .ai-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-height: 420px;
+            overflow-y: auto;
+            padding: 0.5rem 0.25rem;
+        }
+
+        .ai-message {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .ai-message--user {
+            flex-direction: row-reverse;
+        }
+
+        .ai-message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2a2b5f, #1e3a8a);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .ai-message--user .ai-message-avatar {
+            background: linear-gradient(135deg, #fdb913, #f59e0b);
+            color: #2a2b5f;
+            font-size: 0.7rem;
+        }
+
+        .ai-message-bubble {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            border-top-left-radius: 4px;
+            padding: 0.9rem 1.1rem;
+            font-size: 0.875rem;
+            line-height: 1.65;
+            color: var(--text-primary);
+            max-width: 88%;
+        }
+
+        .ai-message--user .ai-message-bubble {
+            background: linear-gradient(135deg, #2a2b5f, #1e3a8a);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            border-top-right-radius: 4px;
+        }
+
+        .ai-message-bubble p { margin: 0 0 0.5em 0; }
+        .ai-message-bubble p:last-child { margin-bottom: 0; }
+        .ai-message-bubble strong { font-weight: 700; }
+        .ai-message-bubble ul, .ai-message-bubble ol { padding-left: 1.2rem; margin: 0.4rem 0; }
+        .ai-message-bubble li { margin-bottom: 0.25rem; }
+
+        /* Typing indicator */
+        .ai-typing-indicator .ai-message-bubble {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 0.75rem 1rem;
+        }
+
+        .ai-typing-dot {
+            width: 7px;
+            height: 7px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: ai-bounce 1.2s infinite;
+            opacity: 0.7;
+        }
+
+        .ai-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .ai-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes ai-bounce {
+            0%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-6px); }
+        }
+
+        .ai-input-row {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-end;
+        }
+
+        .ai-textarea {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            resize: none;
+            outline: none;
+            transition: border-color 0.2s;
+            line-height: 1.5;
+        }
+
+        .ai-textarea:focus { border-color: var(--accent); }
+
+        .ai-send-btn {
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(135deg, #2a2b5f, #1e3a8a);
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(42,43,95,0.25);
+        }
+
+        .ai-send-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(42,43,95,0.35); }
+        .ai-send-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+        .ai-chat-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.75rem;
+        }
+
+        .ai-clear-btn, .ai-disconnect-btn {
+            background: none;
+            border: none;
+            font-size: 0.78rem;
+            cursor: pointer;
+            padding: 0.3rem 0.5rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .ai-clear-btn { color: var(--text-secondary); }
+        .ai-clear-btn:hover { color: var(--accent); background: rgba(42,43,95,0.05); }
+        .ai-disconnect-btn { color: #800020; }
+        .ai-disconnect-btn:hover { background: rgba(128,0,32,0.05); }
     </style>
 </head>
 
@@ -797,6 +1153,90 @@
                 <div id="multi-chart-zone" style="display:none">
                     <div class="multi-chart-grid" id="multi-grid"></div>
                 </div>
+
+                <!-- ════════════════════════════════════════════
+                     ASISTENTE IA – Panel de Análisis con ChatGPT
+                     ════════════════════════════════════════════ -->
+                <div class="ai-assistant-panel" id="ai-assistant-panel">
+                    <div class="ai-panel-header">
+                        <div class="ai-header-left">
+                            <div class="ai-avatar">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+                                    <path d="M12 8v4m0 4h.01"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="ai-panel-title">Asistente de Análisis</h3>
+                                <p class="ai-panel-subtitle">Analiza los resultados con inteligencia artificial</p>
+                            </div>
+                        </div>
+                        <div class="ai-header-right">
+                            <span class="ai-powered-badge">Powered by GPT-4o</span>
+                            <button class="ai-toggle-btn" id="ai-toggle-btn" title="Expandir / Colapsar">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="18 15 12 9 6 15"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ai-panel-body" id="ai-panel-body">
+                        <!-- API Key setup (mostrado solo si no hay key) -->
+                        <div class="ai-key-setup" id="ai-key-setup">
+                            <div class="ai-key-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2a2b5f" stroke-width="2">
+                                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+                                </svg>
+                            </div>
+                            <p class="ai-key-title">Conecta tu API Key de OpenAI</p>
+                            <p class="ai-key-desc">Tu clave se guarda localmente en el navegador y nunca sale de tu computador.</p>
+                            <div class="ai-key-input-row">
+                                <input type="password" id="ai-api-key-input" placeholder="sk-..." class="ai-key-input"/>
+                                <button id="ai-save-key-btn" class="ai-save-key-btn">Guardar y Conectar</button>
+                            </div>
+                        </div>
+
+                        <!-- Chat (visible cuando hay key) -->
+                        <div class="ai-chat-area" id="ai-chat-area" style="display:none">
+                            <!-- Sugerencias rápidas -->
+                            <div class="ai-suggestions" id="ai-suggestions">
+                                <button class="ai-suggestion-chip" data-prompt="¿Cuál es la tendencia principal que muestra esta gráfica?">📊 Tendencia principal</button>
+                                <button class="ai-suggestion-chip" data-prompt="¿Qué grupo demográfico presenta el resultado más destacado?">👥 Grupo destacado</button>
+                                <button class="ai-suggestion-chip" data-prompt="¿Cómo se puede interpretar este resultado en el contexto de la democracia colombiana?">🗳️ Contexto democrático</button>
+                                <button class="ai-suggestion-chip" data-prompt="¿Qué implicaciones de política pública se desprenden de estos datos?">📋 Implicaciones de política</button>
+                            </div>
+
+                            <!-- Historial de mensajes -->
+                            <div class="ai-messages" id="ai-messages">
+                                <div class="ai-message ai-message--assistant ai-message--intro">
+                                    <div class="ai-message-avatar">IA</div>
+                                    <div class="ai-message-bubble">
+                                        Hola, soy tu asistente de análisis. Tengo acceso al contexto completo de la gráfica actual: la pregunta, los datos filtrados y la distribución de respuestas. ¿En qué te puedo ayudar?
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Campo de entrada -->
+                            <div class="ai-input-row">
+                                <textarea id="ai-user-input" class="ai-textarea" rows="2" placeholder="Escribe tu pregunta sobre los datos..."></textarea>
+                                <button id="ai-send-btn" class="ai-send-btn" title="Enviar">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="22" y1="2" x2="11" y2="13"/>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Footer del chat -->
+                            <div class="ai-chat-footer">
+                                <button class="ai-clear-btn" id="ai-clear-btn">Limpiar conversación</button>
+                                <button class="ai-disconnect-btn" id="ai-disconnect-btn">Cambiar API Key</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </main>
 
             <footer class="app-footer">
