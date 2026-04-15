@@ -1,0 +1,763 @@
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre democracia 2025 INVAMER S.A.S Página 1 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+ 
+ 
+Cuestionario No.  
+ 
+ 
+PUNTO MUESTRAL:  ( ) 
+NÚMERO DE HOGARES EN LA MANZANA   Localidad  
+NÚMERO MANZANA ORIGINAL:  NÚMERO MANZANA REALIZACIÓN ENCUESTA:   
+TIPO MANZANA: Manzana original 1 Manzana reemplazo _________________ 2 
+Encuestado:   Barrio encuestado:   
+Dirección:   
+Teléfono:  Celular:   
+Hora Comienzo:  Hora Terminación:    Total minutos:     
+Encuestador:   ( ) Fecha:  / /  
+Rev.   ( ) Fecha:  / /  Sup  ( ) Fecha: / /  
+Cod.   ( ) Fecha:  / /  Grab.  (  ) Fecha:  /  /  
+RC_1 En el hogar se negaron a contestar 
+RC_6 En el hogar no hay ninguna persona con la edad indicada 
+RC_2 La persona indicada se negó a contestar 
+REGISTRO DE CONTACTOS 
+   
+ 
+ESTUDIO SOBRE DEMOCRACIA EN COLOMBIA 2025 
+Código 033400250000 
+-Encuesta Personal- 
+ 
+ESTRATO SOCIAL 1 2 3 4 5 6 98 
+ESTRATO SERVICIOS  
+1 
+ 
+2 
+ 
+3 
+ 
+4 
+ 
+5 
+ 
+6 NS 
+999 
+ 
+SEXO 
+MASCULINO 1 
+FEMENINO 2 
+ 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre democracia 2025 INVAMER S.A.S Página 2 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+ 
+ 
+ 
+Buenos (días/tardes/noches). Mi nombre es  (MOSTRAR CARNET) y trabajo para INVAMER, una firma especializada en 
+estudios de opinión pública. En estos momentos estamos haciendo un estudio sobre algunos aspectos de mucho interés y 
+actualidad ¿Podría usted colaborarme con 20 minutos de su tiempo si fuera tan amable? (MUESTRE DOCUMENTO DE 
+TRANQUILIDAD) 
+ 
+Si 1 (Continúe) 
+No  2 (Termine, agradezca y registre en RC_1) 
+RC_1  En el hogar se negaron a contestar 
+ 
+ENCUESTADOR LEA ANTES DE INICIAR LA ENCUESTA 
+Sus respuestas serán usadas únicamente para clasificarlas en grupos con fines estadísticos y serán confidenciales. 
+Le informo que esta encuesta puede ser grabada o monitoreada con el propósito de mejorar la calidad de nuestro servicio. 
+ 
+ 
+A. Me podría decir, ¿cuántos(as) hombres y/o mujeres de 18 años en adelante viven permanentemente en este hogar? Por 
+favor no incluya empleados de servicio doméstico, si es que los hay. 
+Número de hombres y mujeres del hogar de 18 años en adelante:   
+ 
+B. ¿Cuál de estas personas que estén presentes en este momento en casa es la más próxima a cumplir años? ¿Podría hablar 
+con él (ella) por favor? 
+ 
+Sí 1 (REPITA PRESENTACIÓN Y PASE A P.C.) 
+No 2 (TERMINE, AGRADEZCA Y ANOTE EN RC_2) 
+RC_2  La persona indicada se negó a contestar. 
+ 
+C. ¿Podría decirme su edad por favor?: Edad exacta:   (SI NO ACEPTA FORMULE) 
+¿En cuál de los siguientes rangos de edad se encuentra usted? 
+18-24  1 25-34  2 35-44  3 45-54  4 55 o más ___ 5 
+D. ¿Qué hace o a qué se dedica usted actualmente? (NO LEA) 
+ 
+Empleado/asalariado 1 (VERIFIQUE LA CUOTA DE PERSONAS 
+ECONÓMICAMENTE ACTIVAS) Trabaja independiente/propietario 2 
+Retirado/Jubilado 3 
+ 
+(CUOTA DE PERSONAS ECONÓMICAMENTE 
+INACTIVAS) 
+Desempleado 4 
+Ama de Casa 5 
+Estudiante 6 
+Otro (Esp.)  (996) 
+PRESENTACIÓN 
+FILTROS 
+- SI NO HAY, TERMINE Y ANOTE EN RC_6. 
+- SI HAY UN(A) (HOMBRE/ MUJER), SOLICITE HABLAR CON EL (ELLA), PRESÉNTESE Y PASE A P.C. 
+- SI HAY DOS O MAS (HOMBRES/MUJERES), CONTINÚE CON P. B 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 3 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+ 
+ 
+SECCIÓN 1: Demografía (NO LEER) 
+ 
+1. ¿Cuál es su país de nacimiento? (ESPONTÁNEA) (RESPUESTA ÚNICA) (NO LEER OPCIONES DE RESPUESTA) 
+  
+Colombia                                        1 ¿En cuál municipio nació?                                                   
+Venezuela                                   2 
+Otro                                               996 
+(NO LEER) Prefiere no responder       98 
+ 
+2. (NO LEER) (RESPUESTA ÚNICA, POR OBSERVACIÓN DEL ENCUESTADOR) ¿Cuál es el sexo del encuestado? 
+  
+Masculino      1          
+Femenino      2 
+ 
+3. ¿Usted se reconoce cómo? (LEA) (RESPUESTA ÚNICA) 
+ 
+Hombre                                                        1 
+Mujer                                   2 
+Hombre trans                       3 
+Mujer trans                                                      4 
+No binario                                                                 5 
+Género fluido                                                               6 
+(NO LEER) Prefiere no responder                               98 
+ 
+4.  ¿Cuál es el nivel educativo más alto que ha alcanzado? (LEA) (RESPUESTA ÚNICA) 
+ 
+Ninguno                                                        1 
+Preescolar                                                         2 
+Básica primaria                                  3 
+Básica secundaria                                               4 
+Media                                                                              5 
+Técnica/tecnología                                                    6 
+Pregrado                                                                        7 
+Posgrado                                                                      8 
+(NO LEER) No sabe                                                97 
+(NO LEER) Prefiere no responder                               98 
+ 
+5.  De acuerdo con la factura de servicios públicos, ¿cuál es el estrato socioeconómico de su vivienda?  (LEA) (RESPUESTA 
+ÚNICA) 
+ 
+Estrato 1                                1 
+Estrato 2             2 
+Estrato 3                      3 
+Estrato 4                                           4 
+Estrato 5                                                   5 
+Estrato 6                                                6 
+La vivienda no tiene estrato                           7 
+(NO LEER) Prefiere no responder                         98 
+  
+ 
+ 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 4 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+ 
+ 
+SECCIÓN 2: Satisfacción con la democracia (NO LEER) 
+ 
+6. ¿Por favor indique tres palabras que se le vienen a la mente cuando decimos Democracia? (ABIERTA) (MOSTRAR TRES 
+CAMPOS PARA INGRESAR RESPUESTAS, PERMITIR  INGRESAR MÁXIMO TRES Y MÍNIMO UNA) 
+ 
+1.                                              
+2.                                             
+3.                                             
+ 
+Antes de preguntar por la satisfacción con el funcionamiento de la democracia, se leerá un párrafo 
+ 
+(ESCOGER OPCIÓN 1, 2 O 3 DE FORMA ALEATORIA, A LOS ENCUESTADOS SE LES LEE LA 1, LA 2 O LA 3) 
+ 
+(PROBABILIDAD DEL 33.33%) 01. Según los historiadores, Colombia es la democracia más antigua y estable de América Latina; es 
+la que menos golpes de estado ha tenido, y menos años ha vivido bajo regímenes militares  
+ 
+(PROBABILIDAD DEL 33.33%) 02. Según la prestigiosa revista The Economist  (LEA: DE ECONOMIST) , Colombia tiene el noveno 
+mejor índice de desempeño democrático de América Latina, mejor que el de países como Perú, México y Ecuador.  
+ 
+(PROBABILIDAD DEL 33.33%)  03. Colombia es un Estado social de derecho, organizado en forma de República unitaria, 
+descentralizada, con autonomía de sus entidades territoriales, democrática, participativa y pluralista 
+ 
+7.  (LEA 0 1, 02 O 03 DEPENDIENDO DE LA ALEATOREIDAD DEL CUADRO ANTERIOR).  ¿Usted se siente satisfecho o 
+insatisfecho con el funcionamiento de la democracia en Colombia? (RESPUESTA ÚNICA) 
+ 
+Satisfecho                                           1 
+Insatisfecho                                                     2 
+(NO LEER) Prefiere no responder                               98 
+ 
+8.  En una escala de 1 a 4, en la que 1 significa nada influenciado(a) y 4 muy influenciado(a), ¿qué tan influenciado(a) está su 
+satisfacción con el funcionamiento de la democracia por hechos y noticias recientes? (RESPUESTA ÚNICA) 
+ 
+Nada influenciado(a)                                      _1 
+2                                           2 
+3                                                     3 
+Muy influenciado(a)                                       4 
+(NO LEER) Prefiere no responder                      98 
+ 
+9.  En una escala de 1 a 4, en la que 1 significa nada probable y 4 muy probable, ¿qué tan probable es que nuevos hechos y 
+noticias cambien su satisfacción con el funcionamiento de la democracia? (RESPUESTA ÚNICA) 
+ 
+Nada probable     1 
+2                                         2 
+3                                                3 
+Muy probable                                        4 
+(NO LEER) Prefiere no responder        98 
+ 
+ 
+ 
+ 
+ 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 5 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+ 
+ 
+10. En una escala de 1 a 4, en la que 1 significa nada de influencia y 4 mucha influencia, ¿En qué medida cada uno de los 
+siguientes atributos influencia su grado de satisfacción con el funcionamiento de la democracia? (RESPUESTA ÚNICA POR 
+CADA ÍTEM) (LEA) 
+ 
+ (ROTAR) Nada de 
+influencia 
+2 3 Mucha 
+influencia  
+(NO LEER)  
+Prefiere no 
+responder 
+1 Lo que escucho o leo sobre hechos de 
+corrupción 1 2 3 4 98 
+2 Las protestas o marchas 1 2 3 4 98 
+3 Los enfrentamientos entre líderes políticos 1 2 3 4 98 
+4 La desigualdad socioeconómica 1 2 3 4 98 
+5 Veo restringidas mis libertades más 
+importantes (de expresión, económicas, de 
+movilidad) 
+1 2 3 4 98 
+6 Los líderes/actores políticos hablan (o no 
+hablan) de lo que es importante para mí 1 2 3 4 98 
+7 La presencia integral del Estado en mi 
+comunidad 1 2 3 4 98 
+8 La asistencia que recibo del Estado 1 2 3 4 98 
+9 Los líderes políticos no tienen preparación  1 2 3 4 98 
+10 Los mecanismos y organismos de control 
+(contraloría, procuraduría) no están al 
+servicio de los ciudadanos 
+1 2 3 4 98 
+11 La pobreza 1 2 3 4 98 
+ 
+11. En una escala de 1 a 4, en la que 1 significa nada de influencia y 4 mucha influencia, ¿en qué nivel influirían los siguientes 
+cambios en su satisfacción con el funcionamiento de la democracia en Colombia? (RESPUESTA ÚNICA POR CADA ÍTEM) 
+(LEA) 
+ 
+ (ROTAR) Nada de 
+influencia 
+2 3 Mucha 
+influencia  
+(NO LEER)  
+Prefiere no 
+responder 
+1 Más contacto directo o cercanía con sus 
+representantes elegidos 1 2 3 4 98 
+2 Mejor preparación (educación, 
+conocimientos) de sus representantes 
+elegidos 
+1 2 3 4 98 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 6 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+3 Mayor información y transparencia sobre el 
+uso de los recursos públicos 1 2 3 4 98 
+4 Mayor diversidad en los representantes 
+elegidos 1 2 3 4 98 
+5 Una forma diferente de financiar campañas 
+políticas 1 2 3 4 98 
+6 Más asistencia del estado a mi o a mi 
+comunidad 1 2 3 4 98 
+7 Mayor seguridad en las calles y en el campo 1 2 3 4 98 
+8 Más y mejores oportunidades de educación 
+o trabajo para mi o en mi comunidad 1 2 3 4 98 
+9 Una nueva constitución política (conjunto 
+de reglas -derechos y deberes - para la 
+sociedad) 
+1 2 3 4 98 
+10 Un mejor complimiento de la constitución y 
+las leyes existentes 1 2 3 4 98 
+11 Mejores acuerdos entre contradictores 
+políticos 1 2 3 4 98 
+12 Mayores posibilidades de participación 
+directa en las decisiones que son 
+importantes para mí o mi comunidad 
+1 2 3 4 98 
+ 
+12. En una escala de 1 a 4, en la que 1 significa nada importante y 4 totalmente importante, ¿qué tan importantes son estos 
+factores para el funcionamiento de la democracia en Colombia? (RESPUESTA ÚNICA POR CADA ÍTEM) (LEA) 
+ 
+ (ROTAR) Nada 
+importante 
+2 3 Totalmente 
+importante  
+(NO LEER)  
+Prefiere no 
+responder 
+1 Los ciudadanos participan en la toma de 
+decisiones políticas 1 2 3 4 98 
+2 Existe respeto de la dignidad humana y de 
+los derechos individuales 1 2 3 4 98 
+3 Existe discusión libre de ideas e intereses 
+en el debate público 1 2 3 4 98 
+4 Los ciudadanos se someten a las reglas 
+claras de la Constitución 1 2 3 4 98 
+5 Se reconoce la necesidad de buscar una 
+igualdad socioeconómica básica 1 2 3 4 98 
+6 La mayoría de los ciudadanos se 1 2 3 4 98 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 7 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+comportan de manera cívica y respetan las 
+leyes 
+ 
+13. (ENTREGUE TARJETA 13) En una escala de 1 a 4 donde 1 significa ningún riesgo, 2 bajo riesgo, 3 riesgo moderado y 4 alto 
+riesgo, e n su opinión, ¿cree que alguno de  los siguientes factores que le voy a mencionar está en riesgo en nuestra 
+democracia? (RESPUESTA ÚNICA POR CADA ÍTEM) (LEA) 
+  
+ (ROTAR) Ningún 
+riesgo 
+Bajo riesgo Riesgo 
+moderado 
+Alto riesgo  (NO LEER)  
+Prefiere no 
+responder 
+1 Participación ciudadana 1 2 3 4 98 
+2 Respeto de la dignidad humana y de los 
+derechos individuales 1 2 3 4 98 
+3 Discusión libre de ideas e intereses en el 
+debate público 1 2 3 4 98 
+4 El cuidado y defensa de la Constitución 1 2 3 4 98 
+5 La necesidad de buscar una igualdad 
+socioeconómica básica 1 2 3 4 98 
+6 El compromiso ciudadano y respeto por la 
+ley 1 2 3 4 98 
+ 
+14. Se habla de aciertos, tensiones y desafíos que atraviesa la democracia en Colombia. En su opinión, ¿la democracia 
+colombiana se está fortaleciendo, permanece igual o se está debilitando? (RESPUESTA ÚNICA) (LEA) 
+ 
+La democracia colombiana se está fortaleciendo                           1 
+La democracia colombiana permanece igual               2 
+La democracia colombiana se está debilitando                           3 
+(NO LEER) Prefiere no responder                                98 
+ 
+15. En una escala de 1 a 4, en la que 1 significa nada de acuerdo y 4 totalmente de acuerdo, ¿qué tan de acuerdo está con las 
+siguientes afirmaciones? (RESPUESTA ÚNICA POR CADA ÍTEM) (LEA) 
+ 
+ (ROTAR) Nada de 
+acuerdo 
+2 3 Totalmente
+de acuerdo  
+(NO LEER)  
+Prefiere no 
+responder 
+1 Se aprende qué es y cómo funciona la 
+democracia en Colombia en el hogar/con la 
+familia 
+1 2 3 4 98 
+2 Se aprende qué es y cómo funciona la 
+democracia en Colombia en el barrio/vereda 1 2 3 4 98 
+3 Se aprende qué es y cómo funciona la 
+democracia en Colombia en el colegio o 
+universidad 
+1 2 3 4 98 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 8 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+4 Se aprende qué es y cómo funciona la 
+democracia en Colombia en redes sociales 1 2 3 4 98 
+5 Se aprende qué es y cómo funciona la 
+democracia en Colombia en los medios 
+tradicionales (radio, TV, periódicos) 
+1 2 3 4 98 
+ 
+16. ¿Ha votado usted en los últimos cinco años? (RESPUESTA ÚNICA) 
+ 
+Sí                                     1 
+No                       2 
+No recuerda_____________  3 
+(NO LEER) Prefiere no responder           98 
+ 
+16A. ¿Piensa votar usted en las próximas elecciones? (RESPUESTA ÚNICA) 
+ 
+Sí                                     1 
+No                       2 
+Aún no sabe ___________  3 
+(NO LEER) Prefiere no responder           98  
+ 
+17. Al salir a votar, lo haría por (RESPUESTA ÚNICA) (LEA): 
+ 
+La costumbre                                     1 
+La esperanza de un cambio                        2 
+La solicitud de alguien más                      3 
+Es mi deber ciudadano__________                  4 
+(NO LEER) Prefiere no responder                      98 
+ 
+18. En una escala de 1 a 4, en la que 1 significa nada importante y 4 muy importante, desde su punto de vista, ¿qué tan 
+importantes son estos elementos para que las elecciones sean libres y justas? (RESPUESTA ÚNICA POR CADA ÍTEM) (LEA) 
+ 
+ (ROTAR) Nada 
+importante 
+2 3 Muy 
+importante  
+(NO LEER)  
+Prefiere no 
+responder 
+1 Los votantes tienen acceso a información 
+adecuada para tomar una decisión 
+informada 
+1 2 3 4 98 
+2 La administración electoral es independiente 
+e imparcial 1 2 3 4 98 
+3 La infraestructura electoral (puestos de 
+votación, conteo de votos, transmisión de 
+información) es protegida de amenazas 
+1 2 3 4 98 
+4 Las leyes electorales son explicadas 
+claramente a los votantes 1 2 3 4 98 
+5 Las leyes electorales no cambian justo antes 
+de las elecciones 1 2 3 4 98 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 9 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+6 La administración electoral es recursiva y 
+competente para cumplir sus deberes 1 2 3 4 98 
+7 No existe coerción o presión a los votantes 1 2 3 4 98 
+8 Existe financiación equitativa de las campañas 1 2 3 4 98 
+ 
+19. En una escala de 1 a 4, en la que 1 significa nada de acuerdo y 4 totalmente de acuerdo, ¿qué tan de acuerdo está con la 
+siguiente afirmación? “Usted cree que en otras partes del mundo hay democracias que funcionan mejor que en Colombia” 
+(RESPUESTA ÚNICA) (LEA) 
+ 
+Nada de acuerdo    1 
+2                                           2 
+3                                                     3 
+Totalmente de acuerdo                                4 
+(NO LEER) Prefiere no responder                      98 
+ 
+20. En una escala de 1 a 4, en la que 1 significa nada de acuerdo y 4 totalmente de acuerdo, ¿qué tan de acuerdo está con la 
+siguiente afirmación? “Usted cree que en una sociedad más educada (mayor cobertura y mejor calidad en educación 
+básica, media y superior) funciona mejor la democracia” (RESPUESTA ÚNICA) (LEA) 
+ 
+Nada de acuerdo    1 
+2                                           2 
+3                                                     3 
+Totalmente de acuerdo                                4 
+(NO LEER) Prefiere no responder                      98 
+ 
+21. Ordene de 1 a 4, siendo 1 el más importante y 4 el menos importante, ¿cuáles de los siguientes atributos sobre el gobierno 
+nacional (piense en el presidente y sus ministros) son los más importantes para el buen funcionamiento de la democracia? 
+(LEA) (ORDENAMIENTO) 
+ 
+1. Que sea afín a mi ideología: izquierda o derecha            
+2. Que sea transparente                                      
+3. Que sea eficiente                                              
+4. Que respete los límites constitucionales                           
+ 
+22. Ordene de 1 a 4, siendo 1 el más importante y 4 el menos importante, ¿cuáles de los siguientes atributos sobre el gobierno 
+local o regional (piense en alcaldes y gobernadores) son los más importantes para el buen funcionamiento de la 
+democracia? (LEA) (ORDENAMIENTO) 
+ 
+ 1. Que sea afín a mi ideología: izquierda o derecha             
+2. Que sea transparente                                            
+3. Que sea eficiente                                              
+4. Que respete los límites constitucionales                           
+ 
+23. (ENTREGUE TARJETA 23) En su opinión, ¿qué tan buena o mala es cada una de estas formas de gobernar un país?  por 
+favor utilice una escala de 1 a 4 donde 1 es muy buena, 2 buena, 3 mala y 4 muy mala.  (RESPUESTA ÚNICA POR CADA 
+ÍTEM) (LEA) 
+ 
+ (ROTAR) Muy 
+buena 
+Buena Mala Muy 
+mala 
+(NO LEER)  Prefiere 
+no responder 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 10 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+1 Tener un sistema político democrático con presidente 
+y congreso que representan a los ciudadanos 1 2 3 4 98 
+2 Tener un sistema político en el que los ciudadanos 
+puedan participar directamente en decisiones 
+importantes para su comunidad 
+1 2 3 4 98 
+3 Tener un sistema político en el que las decisiones más 
+importantes sean tomadas por expertos 1 2 3 4 98 
+4 Ser liderados por una figura fuerte que no tenga que 
+preocuparse por el congreso o las elecciones 1 2 3 4 98 
+5 Que las fuerzas armadas gobiernen el país 1 2 3 4 98 
+ 
+24. ¿Cuál de las siguientes opiniones se alinea mejor con su punto de vista? (RESPUESTA ÚNICA) (LEA) 
+ 
+Votar no tiene importancia                                             1 
+Votar es importante porque las elecciones pueden hacer una diferencia               2 
+(NO LEER) Prefiere no responder                                98 
+ 
+25. (PARA LOS QUE RESPONDEN 1 EN 24) ¿Por qué razón votar no tiene importancia?  (RESPUESTA ÚNICA) (LEA) 
+ 
+Porque a los políticos no les importa la voluntad de la gente        1 
+Porque los políticos son corruptos                                      2 
+Porque no sé del tema/ no me interesa                               3 
+Porque ningún candidato me convence o me gusta                    4 
+(NO LEER) Prefiere no responder                        98 
+ 
+26. (ENTREGUE TARJETA 26-27) Hablando sobre los partidos políticos, ¿qué tan de acuerdo está con las siguientes frases? Por 
+favor utilice una escala de 1 a 4 donde 1 es muy de acuerdo, 2 de acuerdo, 3 en desacuerdo y 4 muy en desacu erdo. 
+(RESPUESTA ÚNICA POR CADA ÍTEM) (LEA) 
+ 
+ (ROTAR) Muy de 
+acuerdo 
+De acuerdo En 
+desacuerdo 
+Muy en 
+desacuerdo 
+(NO LEER)  
+Prefiere no 
+responder 
+1 Todos los partidos políticos hacen 
+propuestas muy parecidas para gobernar 1 2 3 4 98 
+2 Hay suficientes partidos a los que votar en 
+las elecciones 1 2 3 4 98 
+3 Sin partidos políticos no puede haber 
+democracia 1 2 3 4 98 
+4 Los partidos eligen a sus candidatos/as por 
+procedimientos democráticos 1 2 3 4 98 
+5 Los/as ciudadanos/as que pertenecen al 
+partido en el poder, reciben mejor trato por 
+parte de la administración 
+1 2 3 4 98 
+ 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 11 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+ 
+ 
+27. (ENTREGUE TARJETA 26-27) En general, sobre los medios de comunicación tradicionales (radio, TV, periódicos), ¿qué tan 
+de acuerdo está con las siguientes frases? Por favor utilice una escala de 1 a 4 donde 1 es muy de acuerdo, 2 de acuerdo, 
+3 en desacuerdo y 4 muy en desacuerdo (RESPUESTA ÚNICA POR CADA ÍTEM) (LEA) 
+ 
+ (ROTAR) Muy de 
+acuerdo 
+De acuerdo En 
+desacuerdo 
+Muy en 
+desacuerdo 
+(NO LEER)  
+Prefiere no 
+responder 
+1 Hacen eco de noticias falsas y mentiras 1 2 3 4 98 
+2 Dan acceso a diferentes tipos de opinión 1 2 3 4 98 
+3 Están concentrados en pocas manos o 
+grupos de comunicación 1 2 3 4 98 
+4 Favorecen unas opciones políticas e/o 
+intereses económicos más que otros 1 2 3 4 98 
+ 
+28. En una escala de 1 a 4, en la que 1 significa nada de acuerdo y 4 totalmente de acuerdo, ¿qué tan de acuerdo está con la 
+siguiente afirmación? "Los representantes elegidos por los ciudadanos deberían consultar la opinión de expertos a la hora 
+de diseñar soluciones a los problemas públicos" (RESPUESTA ÚNICA) (LEA) 
+ 
+Nada de acuerdo     1 
+2                                            2 
+3                                                     3 
+Totalmente de acuerdo                                4 
+(NO LEER) Prefiere no responder                      98 
+ 
+29. En una escala de 1 a 4, en la que 1 significa nada de acuerdo y 4 totalmente de acuerdo, ¿qué tan de acuerdo está con la 
+siguiente afirmación? "Los representantes elegidos por los ciudadanos deberían consultar a universidades, centros de 
+estudio y demás organizaciones de conocimiento a la hora de diseñar soluciones a los problemas  públicos" (RESPUESTA 
+ÚNICA) (LEA) 
+ 
+Nada de acuerdo    1 
+2                                            2 
+3                                                     3 
+Totalmente de acuerdo                                4 
+(NO LEER) Prefiere no responder                      98 
+ 
+30. (ENTREGUE TARJETA 30)  Cuando escucha o lee sobre los líderes políticos, su reacción más frecuente es (RESPUESTA 
+ÚNICA) (LEA): 
+ 
+Sentir indignación o rabia    1 
+Sentir decepción o tristeza            2 
+Sentir indiferencia                                 3 
+Sentir interés, deseos de saber más  4 
+Sentir esperanza o ilusión                              5 
+(NO LEER) Prefiere no responder                      98 
+ 
+31. La mayoría de las veces, cuando un político habla… (RESPUESTA ÚNICA) (LEA): 
+ 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 12 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+Siento que están hablando sobre cosas que me importan                         1 
+Siento que están hablando sobre cosas que no me importan            2 
+ 
+32. En una escala de 1 a 4, en la que 1 significa que no es una amenaza y 4 es una amenaza muy seria, desde su punto de vista, 
+¿cuáles de las siguientes amenazas a la democracia son las más serias en Colombia? (RESPUESTA ÚNICA POR CADA ÍTEM) 
+(LEA): 
+ 
+ (ROTAR) No es una amenaza 2 3 Es una 
+amenaza 
+muy seria 
+(NO LEER)  
+Prefiere no 
+responder 
+1 Información falsa o engañosa en general 1 2 3 4 98 
+2 Desconfianza y escepticismo creciente hacia las 
+instituciones democráticas 1 2 3 4 98 
+3 Falta de interés y compromiso en políticas y 
+elecciones entre los ciudadanos 1 2 3 4 98 
+4 Falta de oportunidades para que los ciudadanos den 
+voz a sus opiniones como consecuencia de la 
+desigualdad socioeconómica 
+1 2 3 4 98 
+5 Interferencia extranjera en las políticas y la 
+economía del país, a través de la financiación de 
+actores domésticos 
+1 2 3 4 98 
+6 Falta de libertad y diversidad de prensa 1 2 3 4 98 
+7 Falta de conocimiento entre los votantes sobre el 
+funcionamiento de los procesos democráticos 1 2 3 4 98 
+8 Falta de transparencia del sistema electoral 1 2 3 4 98 
+9 Desestabilización de la infraestructura electoral o de 
+los procesos electorales 1 2 3 4 98 
+10 Interferencia de los intereses privados en el sistema 
+político electoral (financiación de campañas, acceso 
+a los medios de comunicación) 
+1 2 3 4 98 
+ 
+33. En una escala de 1 a 4, siendo 1 nada responsable y 4 totalmente responsable, ¿quién es el responsable de cuidar la 
+democracia en Colombia? (RESPUESTA ÚNICA POR CADA ÍTEM) (LEA): 
+ 
+ (ROTAR) Nada 
+responsable 
+2 3 Totalmente 
+responsable 
+(NO LEER)  
+Prefiere no 
+responder 
+1 Los medios de comunicación 1 2 3 4 98 
+2 Las cortes de justicia 1 2 3 4 98 
+3 El gobierno nacional 1 2 3 4 98 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 13 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+4 El gobierno local 1 2 3 4 98 
+5 El congreso 1 2 3 4 98 
+6 Los partidos políticos 1 2 3 4 98 
+7 Organizaciones de la sociedad civil 1 2 3 4 98 
+8 Ciudadanía 1 2 3 4 98 
+9 Fuerzas Militares 1 2 3 4 98 
+ 
+34. En una escala de 1 a 4, siendo 1 nada confiable y 4 totalmente confiable, ¿qué tan confiables son cada una de las siguientes 
+organizaciones? (RESPUESTA ÚNICA POR CADA ÍTEM) (LEA): 
+ 
+ (ROTAR) Nada 
+confiable 
+2 3 Totalmente 
+confiable 
+(NO LEER)  
+Prefiere no 
+responder 
+1 Los medios de comunicación 1 2 3 4 98 
+2 Las cortes de justicia 1 2 3 4 98 
+3 El gobierno nacional 1 2 3 4 98 
+4 El gobierno local 1 2 3 4 98 
+5 El congreso 1 2 3 4 98 
+6 Los partidos políticos 1 2 3 4 98 
+7 Organizaciones de la sociedad civil 1 2 3 4 98 
+8 Ciudadanía 1 2 3 4 98 
+9 Fuerzas Militares 1 2 3 4 98 
+ 
+35. Las opiniones que usted acaba de expresar sobre el cuidado de la democracia por parte de los actores políticos está n 
+influenciadas principalmente por información que usted obtiene de: (RESPUESTA ÚNICA) (LEA): 
+ 
+Los medios tradicionales (TV, radio, periódicos)                         1 
+Las redes sociales                                           2 
+Amigos o familiares                                                     3 
+El contacto directo con estos actores políticos                               4 
+(NO LEER) Prefiere no responder                         98 
+ 
+36. Para los siguientes grupos de personas, ¿ indique cuántas personas conoce usted con estas características? A los efectos 
+de esta encuesta, la definición de “conocer a alguien” es que usted lo conoce y él/ella lo conoce a usted de vista o de 
+nombre, que podría ponerse en contacto con él, que vive en Colombia y que ha habido algún tipo de contacto -ya sea en 
+persona, por teléfono o por correo- en los últimos dos años (RESPUESTA ÚNICA POR CADA ÍTEM) (LEA): 
+ 
+ (ROTAR) Número de 
+personas 
+(NO LEER) Prefiere 
+no responder 
+Este cuestionario es propiedad intelectual de INVAMER S.A.S por lo tanto se prohíbe su uso, aplicación o reproducción. 
+Estudio sobre la democracia 2025 INVAMER S.A.S Página 14 de 14 
+INVAMER S.A.S, se reserva los derechos de autor y propiedad intelectual sobre el presente documento. 
+ 
+ 
+1 Personas que ejercen como concejales o diputados  98 
+2 Personas que trabajan como policías o militares  98 
+3 Personas que trabajan en medios de comunicación tradicionales 
+(radio, televisión, periódicos) 
+ 98 
+4 Personas que ejercen como religiosos (sacerdotes, pastores, monjas)  98 
+5 Personas que trabajan en la Alcaldía o en la gobernación  98 
+6 Personas que trabajan en el gobierno nacional  98 
+7 Personas que ejercen como líderes sociales o defensores de derechos 
+humanos 
+ 98 
+ 
+37. En política se habla con frecuencia de posiciones de izquierda y de derecha. En una escala de 1 a 10, donde 1 significa 
+izquierda y 10 significa derecha, ¿en qué número se ubicaría usted? (RESPUESTA ÚNICA): 
+ 
+1 Izquierda         1 
+2                         2 
+3                         3 
+4                         4 
+5                        5 
+6                         6 
+7                         7 
+8                         8 
+9                        9 
+10 Derecha               10   
+(NO LEER) Prefiere no responder                  98 
+ 
+Ya para terminar…. 
+ 
+PHD2 Dando cumplimiento a la ley de Protección de Datos Personales le solicito su autorización para que INVAMER pueda 
+contactarlo nuevamente en caso de ser necesario con fines de supervisión de esta encuesta y futuras encuestas. ¿Está usted de 
+acuerdo? 
+Si_____1 No_____2 
+PHD1. Señor(a), ya para terminar, le solicito su autorización para que INVAMER comparta sus datos personales junto con las 
+respuestas que nos dio en esta encuesta con (la empresa que contrató este estudio), ¿Está usted de acuerdo?  
+Si_____1 No_____2 
+AGRADEZCA Y TERMINE 

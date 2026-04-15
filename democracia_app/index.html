@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio sobre Democracia 2025 – INVAMER S.A.S</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <!-- PapaParse -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <!-- noUiSlider for Age Range -->
+    <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
+
+    <!-- Choices.js for Multi-select -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header" style="padding: 0; background: #eeeeee;">
+                <a href="https://www.javeriana.edu.co/hoy-en-la-javeriana/w/noticia-la-javeriana-presenta-resultados-de-cuidar-la-democracia-92-de-los-colombianos-cree-que-su-voto-hace-la-diferencia"
+                    target="_blank">
+                    <img src="./assets/cuidar la democracia.png" alt="Cuidar la Democracia"
+                        style="width: 100%; display: block; border-bottom: 1px solid var(--border-color);">
+                </a>
+            </div>
+
+            <div class="sidebar-content">
+                <div class="filters-container mt-4">
+                    <h3>Filtros de Población y Territorio</h3>
+                    <p class="filter-desc">Ajusta los grupos para observar cambios.</p>
+
+                    <div class="stats-overview sidebar-stats mb-4">
+                        <div class="stat-card">
+                            <span class="stat-value" id="stat-total">0</span>
+                            <span class="stat-label">Total de Encuestas</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value" id="stat-filtered">0</span>
+                            <span class="stat-label">Datos Filtrados</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Edad</label>
+                        <div id="age-slider" class="mt-2 mb-4"></div>
+                        <div class="slider-values">
+                            <span id="age-min">18</span> años - <span id="age-max">100</span> años
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-sexo">Sexo</label>
+                        <select id="filter-sexo" multiple></select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-genero">Género</label>
+                        <select id="filter-genero" multiple></select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-educacion">Nivel Educativo</label>
+                        <select id="filter-educacion" multiple></select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-actividad">Ocupación / Actividad</label>
+                        <select id="filter-actividad" multiple></select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-estrato">Estrato</label>
+                        <select id="filter-estrato" multiple></select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-depto">Departamento</label>
+                        <select id="filter-depto" multiple></select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-muni">Municipio</label>
+                        <select id="filter-muni" multiple></select>
+                    </div>
+
+                    <button class="reset-btn" id="btn-reset">Restablecer Filtros</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Wrapper -->
+        <div class="main-wrapper">
+            <main class="main-content">
+                <header class="main-header mb-5" style="padding: 1.5rem 0;">
+                    <span id="section-badge" class="badge"> </span>
+                    <h1 class="mb-3" style="font-size: 3rem; font-weight: 800;">Resultados Globales</h1>
+                    <p class="text-secondary" style="font-size: 1.25rem; margin-bottom: 2.5rem;">Explora los datos segmentados por demografía y territorio.</p>
+                </header>
+
+                <!-- Render zone for all charts dynamically generated -->
+                <section class="charts-grid" id="charts-wrapper">
+                    <!-- Vía JS inyectaremos tarjetas con canvas -->
+                </section>
+            </main>
+
+            <footer class="app-footer">
+                <div class="footer-content">
+                    <a href="https://www.unisabana.edu.co/proyeccion-social/laboratorio-de-gobierno" target="_blank">
+                        <img src="./assets/Govlab.png" alt="Govlab" class="footer-logo">
+                    </a>
+                    <a href="https://www.invamer.com.co/es/" target="_blank">
+                        <img src="./assets/Invamer.png" alt="Invamer" class="footer-logo">
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Initialization Modal for Loading -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Cargando datos y generando visualizaciones...</p>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+DEPARTAMENTO,MUNICIPIO,es_capital,categoria_municipio
+Cesar,Valledupar,True,1
+Atlántico,Barranquilla,True,Especial
+Antioquia,Medellín,True,Especial
+Antioquia,Bello,False,1
+Antioquia,Itagüí,False,1
+Antioquia,Envigado,False,1
+Bolívar,Cartagena de Indias,True,Especial
+Valle del Cauca,Cali,True,Especial
+Córdoba,Chimá,False,6
+Norte de Santander,San José de Cúcuta,True,1
+Antioquia,Envigado,False,1
+Sucre,Sincelejo,True,1
+Córdoba,Montería,True,1
+Cesar,La Paz,False,6
+Córdoba,Lorica,False,4
+Magdalena,Santa Marta,True,1
+La Guajira,Urumita,False,6
+Antioquia,Copacabana,False,4
+Atlántico,Malambo,False,2
+Santander,Bucaramanga,True,1
+Córdoba,Tierralta,False,4
+Córdoba,Pueblo Nuevo,False,6
+Nariño,Pasto,True,1
+La Guajira,Maicao,False,2
+Córdoba,Planeta Rica,False,4
+Córdoba,San Pelayo,False,6
+Cesar,Bosconia,False,4
+Córdoba,San Carlos,False,6
+Caldas,Manizales,True,1
+Cesar,Astrea,False,6
+Santander,Barrancabermeja,False,1
+Atlántico,Soledad,False,1
+Magdalena,Fundación,False,4
+Caldas,Chinchiná,False,4
+Nariño,San Andrés de Tumaco,False,2
+Nariño,Ipiales,False,3
+Santander,Puerto Wilches,False,6
+Caldas,Villamaría,False,4
+Cauca,Piendamó - Tunía,False,6
+Risaralda,Pereira,True,1
+Quindio,La Tebaida,False,5
+Antioquia,Hispania,False,6
+Antioquia,Ebéjico,False,6
+Nariño,Buesaco,False,6
+Valle del Cauca,Buenaventura,False,1
+Valle del Cauca,Palmira,False,1
+Santander,Chipatá,False,6
+Chocó,Riosucio,False,6
+Antioquia,Turbo,False,2
+Cauca,Puracé,False,6
+Santander,Vélez,False,6
+Nariño,Colón,False,6
+"Bogotá, D.C.","Bogotá, D.C.",True,Especial
+Valle del Cauca,Alcalá,False,6
+Boyacá,Duitama,False,2
+Cauca,Popayán,True,1
+Tolima,Flandes,False,6
+Huila,Guadalupe,False,6
+Huila,Garzón,False,4
+Cauca,Inzá,False,6
+Tolima,Chaparral,False,4
+Huila,Neiva,True,1
+Antioquia,Yondó,False,6
+Huila,Baraya,False,6
+Boyacá,Tunja,True,1
+Antioquia,Santa Bárbara,False,6
+Boyacá,Puerto Boyacá,False,4
+Boyacá,Ventaquemada,False,6
+Cundinamarca,Soacha,False,1
+Cundinamarca,Lenguazaque,False,6
+Cundinamarca,Fusagasugá,False,2
+Cundinamarca,Mosquera,False,1
+Tolima,Prado,False,6
+Tolima,Ibagué,True,1
+Cundinamarca,Cajicá,False,2
+Meta,Villavicencio,True,1
+Casanare,Yopal,True,1
+Casanare,Tauramena,False,6
+Casanare,Támara,False,6
+Cundinamarca,Une,False,6
+Guaviare,San José del Guaviare,True,4
