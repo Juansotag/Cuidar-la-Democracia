@@ -568,6 +568,22 @@ function render() {
     document.getElementById('stat-total').textContent = rawData.length;
     document.getElementById('stat-filtered').textContent = filteredData.length;
 
+    const filteredCount = filteredData.length;
+    const warningEl = document.getElementById('low-data-warning');
+    const cardEl = document.getElementById('filtered-card');
+    if (warningEl && cardEl) {
+        if (filteredCount < 1000) {
+            warningEl.style.display = 'block';
+            const intensity = Math.min(1, Math.max(0, 1000 - filteredCount) / 1000); 
+            cardEl.style.backgroundColor = `rgba(198, 40, 40, ${intensity * 0.15})`;
+            cardEl.style.borderColor = `rgba(198, 40, 40, ${intensity * 0.5})`;
+        } else {
+            warningEl.style.display = 'none';
+            cardEl.style.backgroundColor = '#ffffff'; 
+            cardEl.style.borderColor = 'var(--border-color)';
+        }
+    }
+
     // Comprobar si la segmentación está activa y tiene al menos un grupo
     const isAge = segmentVariable === 'EDAD';
     const hasA = isAge || Object.values(segGroups).some(v => v === 'a');

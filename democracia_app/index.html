@@ -31,7 +31,7 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <div class="sidebar-header" style="padding: 0; background: #eeeeee;">
-                <a href="https://www.javeriana.edu.co/hoy-en-la-javeriana/w/noticia-la-javeriana-presenta-resultados-de-cuidar-la-democracia-92-de-los-colombianos-cree-que-su-voto-hace-la-diferencia"
+                <a href="https://www.unisabana.edu.co/noticias/al-dia/colombia-cree-en-el-voto-pero-desconfia-del-sistema-asi-lo-revela-la-encuesta-cuidar-la-democracia"
                     target="_blank">
                     <img src="./assets/cuidar la democracia.png" alt="Cuidar la Democracia"
                         style="width: 100%; display: block; border-bottom: 1px solid var(--border-color);">
@@ -48,9 +48,10 @@
                             <span class="stat-value" id="stat-total">0</span>
                             <span class="stat-label">Total de Encuestas</span>
                         </div>
-                        <div class="stat-card">
+                        <div class="stat-card" id="filtered-card" style="transition: background-color 0.3s;">
                             <span class="stat-value" id="stat-filtered">0</span>
                             <span class="stat-label">Datos Filtrados</span>
+                            <div id="low-data-warning" style="display:none; color:#c62828; font-size:0.75rem; font-weight:600; margin-top:0.5rem; line-height:1.2;">Mientras más pequeño sea el número de observaciones, más pequeña es la confianza de los resultados y menos representativa es la muestra.</div>
                         </div>
                     </div>
 
