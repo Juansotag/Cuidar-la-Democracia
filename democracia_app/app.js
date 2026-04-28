@@ -542,7 +542,7 @@ function makeCard(col) {
     card.innerHTML = `
         <div class="chart-header">
             <h4>${qDict[col] || col}</h4>
-            <a href="./chart_detail.html?col=${encodeURIComponent(col)}"
+            <a href="./chart_detail.html#col=${encodeURIComponent(col)}"
                target="_blank"
                class="detail-btn"
                title="Abrir en vista de detalle con filtros completos">

@@ -223,7 +223,8 @@ let segAgeSliderA = null, segAgeSliderB = null;
 
 // Leer columna del URL
 const urlParams = new URLSearchParams(window.location.search);
-const COL = urlParams.get('col') || 'P14';
+const hashParams = new URLSearchParams(window.location.hash.substring(1));
+const COL = hashParams.get('col') || urlParams.get('col') || 'P14';
 
 // ─── Inicialización ───────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
@@ -338,7 +339,9 @@ function resetFilters() {
 
 // ─── Restaurar filtros guardados en URL ───────────────────────────────────────
 function restoreFiltersFromURL() {
-    const p = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(window.location.search);
+    const hashParams = new URLSearchParams(window.location.hash.substring(1));
+    const p = hashParams.toString() ? hashParams : urlParams;
 
     // Edad
     const ageMin = p.get('ageMin'), ageMax = p.get('ageMax');
@@ -375,7 +378,7 @@ function shareLink() {
     Object.entries(filterMap).forEach(([filterId, paramKey]) => {
         gv(filterId).forEach(v => p.append(paramKey, v));
     });
-    const url = `${window.location.origin}${window.location.pathname}?${p.toString()}`;
+    const url = `${window.location.origin}${window.location.pathname}#${p.toString()}`;
     navigator.clipboard.writeText(url).then(() => {
         const toast = document.getElementById('copy-toast');
         toast.classList.add('show');
