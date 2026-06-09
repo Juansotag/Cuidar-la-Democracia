@@ -206,6 +206,7 @@ Chart.defaults.color = '#334155';
 Chart.defaults.font.family = "'Inter', sans-serif";
 Chart.register(ChartDataLabels);
 Chart.defaults.plugins.legend.labels.color = '#334155';
+Chart.defaults.devicePixelRatio = 3;
 
 // ─── Estado ───────────────────────────────────────────────────────────────────
 let rawData = [];
@@ -396,14 +397,37 @@ async function downloadPNG() {
         const img = new Image();
         img.onload = () => res(img);
         img.onerror = () => res(null);
-        img.src = src;
+        img.src = src + '?v=' + new Date().getTime(); // Forzar recarga sin caché
     });
 
-    const [logoGov, logoDem, logoInv] = await Promise.all([
-        loadImg('./assets/Govlab.png'),
-        loadImg('./assets/cuidar la democracia.png'),
-        loadImg('./assets/Invamer.png')
-    ]);
+    const logosFooter = await Promise.all([
+        './assets/Govlab.png',
+        './assets/Invamer.png',
+        './assets/Aliados/CESA.png',
+        './assets/Aliados/Confama.png',
+        './assets/Aliados/EAFIT.png',
+        './assets/Aliados/Externado.png',
+        './assets/Aliados/ICESI.png',
+        './assets/Aliados/Javierana.png',
+        './assets/Aliados/Rosario.png',
+        './assets/Aliados/Sura.png',
+        './assets/Aliados/UNAB.png',
+        './assets/Aliados/UTB.png',
+        './assets/Aliados/Uniminuto.png',
+        './assets/Aliados/Universidad del Norte.png',
+        './assets/Aliados/universidad-de-los-andes.png',
+        './assets/Aliados/velezreyes.png'
+    ].map(loadImg));
+    
+    const validLogos = logosFooter.filter(img => img);
+
+    const logosVigilados = await Promise.all([
+        './assets/Vigilados vertical/Vigilada Mineducación.PNG',
+        './assets/Vigilados vertical/Vigilado supersalud.PNG',
+        './assets/Vigilados vertical/Vigilado supersubsidio.PNG'
+    ].map(loadImg));
+    
+    const validVigilados = logosVigilados.filter(img => img);
 
     // 2. Obtener contexto de filtros activos
     const [lo, hi] = document.getElementById('age-slider').noUiSlider.get().map(Math.round);
@@ -442,21 +466,28 @@ async function downloadPNG() {
     }
     const exportCanvas = document.createElement('canvas');
     const ctx = exportCanvas.getContext('2d');
+    
+    const pr = 3; // Coincide con Chart.defaults.devicePixelRatio
+    const cssWidth = mainCanvas.width / pr;
+    const cssHeight = mainCanvas.height / pr;
 
-    // Configurar anchos y márgenes
+    // Configurar anchos y márgenes en pixeles lógicos
     const margin = 40;
-    const maxWidth = mainCanvas.width + 100;
-    exportCanvas.width = maxWidth;
+    const sidebarWidth = 70; // Espacio para etiquetas vigilados
+    const maxWidth = cssWidth + 100;
+    
+    // Establecer ancho físico
+    exportCanvas.width = (maxWidth + sidebarWidth) * pr;
 
     // Función auxiliar para envolver texto
-    const wrapText = (text, x, y, maxWidth, lineHeight) => {
+    const wrapText = (text, x, y, maxW, lineHeight) => {
         const words = text.split(' ');
         let line = '';
         let posY = y;
         for (let n = 0; n < words.length; n++) {
             let testLine = line + words[n] + ' ';
             let metrics = ctx.measureText(testLine);
-            if (metrics.width > maxWidth && n > 0) {
+            if (metrics.width > maxW && n > 0) {
                 ctx.fillText(line, x, posY);
                 line = words[n] + ' ';
                 posY += lineHeight;
@@ -465,13 +496,12 @@ async function downloadPNG() {
             }
         }
         ctx.fillText(line, x, posY);
-        return posY + lineHeight; // Devolver siguiente posición Y
+        return posY + lineHeight;
     };
 
-    // Calcular altura necesaria para cabecera
+    // Calcular altura necesaria para cabecera (usando ctx sin escalar)
     ctx.font = 'bold 20px Inter, sans-serif';
     const title = qDict[COL] || COL;
-    // Estimación rápida de líneas (ctx aún no tiene tamaño final pero medimos sobre maxWidth)
     const titleLines = Math.ceil(ctx.measureText(title).width / (maxWidth - margin * 2)) || 1;
 
     ctx.font = '14px Inter, sans-serif';
@@ -488,13 +518,27 @@ async function downloadPNG() {
     }
 
     const headerHeight = 60 + (titleLines * 26) + (filterLines * 18) + (gALines * 18) + (gBLines * 18) + (groupInfoA || groupInfoB ? 20 : 0);
-    const footerHeight = 120; // Más espacio para logos
+    const footerHeight = 160; 
 
-    exportCanvas.height = mainCanvas.height + headerHeight + footerHeight;
+    // Establecer alto físico
+    const logicalHeight = cssHeight + headerHeight + footerHeight;
+    exportCanvas.height = logicalHeight * pr;
+
+    // Escalar contexto a pixeles lógicos
+    ctx.scale(pr, pr);
 
     // Fondo Blanco / Gris claro branding
     ctx.fillStyle = '#eeeeee';
-    ctx.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
+    ctx.fillRect(0, 0, maxWidth + sidebarWidth, logicalHeight);
+
+    // Dibujar sidebar vigilados
+    let vigY = 50;
+    validVigilados.forEach(img => {
+        const w = 45;
+        const h = img.height * (w / img.width);
+        ctx.drawImage(img, (maxWidth + sidebarWidth) - w - 15, vigY, w, h);
+        vigY += h + 15;
+    });
 
     // Dibujar Título
     ctx.fillStyle = '#0f172a';
@@ -523,32 +567,35 @@ async function downloadPNG() {
         }
     }
     // Centrar la gráfica horizontalmente si es posible
-    const graphX = (exportCanvas.width - mainCanvas.width) / 2;
-    ctx.drawImage(mainCanvas, graphX, currentY + 20);
+    const graphX = (maxWidth - cssWidth) / 2;
+    ctx.drawImage(mainCanvas, graphX, currentY + 20, cssWidth, cssHeight);
 
-    // Dibujar Logos en Footer (LAYOUT SEGURO: Izquierda y Derecha)
-    const footerY = exportCanvas.height - 65;
-    const paddingX = 60;
+    // Dibujar Logos en Footer
+    let currentLogoX = margin;
+    let currentLogoY = logicalHeight - footerHeight + 20;
+    const maxLogoH = 25; // Altura para todos los logos
+    const logoSpacing = 15;
 
-    // 1. Govlab (Izquierda)
-    if (logoGov) {
-        const maxH = 45;
-        const w = logoGov.width * (maxH / logoGov.height);
-        ctx.drawImage(logoGov, margin + paddingX, footerY - 5, w, maxH);
-    }
-
-    // 2. Invamer (Derecha)
-    if (logoInv) {
-        const maxH = 45;
-        const w = logoInv.width * (maxH / logoInv.height);
-        ctx.drawImage(logoInv, exportCanvas.width - margin - paddingX - w, footerY - 5, w, maxH);
-    }
+    validLogos.forEach((img, index) => {
+        let h = maxLogoH;
+        if (index === 0 || index === 1) h = 35; // Govlab e Invamer más grandes
+        
+        let w = img.width * (h / img.height);
+        
+        if (currentLogoX + w > maxWidth - margin) {
+            currentLogoX = margin;
+            currentLogoY += maxLogoH + 15;
+        }
+        
+        ctx.drawImage(img, currentLogoX, currentLogoY, w, h);
+        currentLogoX += w + logoSpacing;
+    });
 
     // Dibujar Marca de Agua / Fuente
     ctx.fillStyle = '#94a3b8';
     ctx.font = 'italic 11px Inter, sans-serif';
     ctx.textAlign = 'right';
-    ctx.fillText('Fuente: Estudio sobre democracia 2025 (INVAMER S.A.S)', exportCanvas.width - margin, exportCanvas.height - 15);
+    ctx.fillText('Fuente: Estudio sobre democracia 2025 (INVAMER S.A.S)', maxWidth - margin, logicalHeight - 15);
 
     // 3. Descargar
     const link = document.createElement('a');
